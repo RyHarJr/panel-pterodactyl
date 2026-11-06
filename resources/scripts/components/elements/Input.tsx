@@ -7,18 +7,18 @@ export interface Props {
 }
 
 const light = css<Props>`
-    ${tw`bg-white border-neutral-200 text-neutral-800`};
+    ${tw`bg-neutral-900 border-neutral-700 text-neutral-100 placeholder-neutral-500`};
     &:focus {
-        ${tw`border-primary-400`}
+        ${tw`border-primary-500 ring-2 ring-primary-500/30`}
     }
 
     &:disabled {
-        ${tw`bg-neutral-100 border-neutral-200`};
+        ${tw`bg-neutral-800 border-neutral-700 text-neutral-400`};
     }
 `;
 
 const checkboxStyle = css<Props>`
-    ${tw`bg-neutral-500 cursor-pointer appearance-none inline-block align-middle select-none flex-shrink-0 w-4 h-4 text-primary-400 border border-neutral-300 rounded-sm`};
+    ${tw`bg-neutral-700 cursor-pointer appearance-none inline-block align-middle select-none flex-shrink-0 w-4 h-4 text-primary-500 border border-neutral-600 rounded`};
     color-adjust: exact;
     background-origin: border-box;
     transition: all 75ms linear, box-shadow 25ms linear;
@@ -31,8 +31,7 @@ const checkboxStyle = css<Props>`
     }
 
     &:focus {
-        ${tw`outline-none border-primary-300`};
-        box-shadow: 0 0 0 1px rgba(9, 103, 210, 0.25);
+        ${tw`outline-none border-primary-500 ring-2 ring-primary-500/30`};
     }
 `;
 
@@ -40,12 +39,12 @@ const inputStyle = css<Props>`
     // Reset to normal styling.
     resize: none;
     ${tw`appearance-none outline-none w-full min-w-0`};
-    ${tw`p-3 border-2 rounded text-sm transition-all duration-150`};
-    ${tw`bg-neutral-600 border-neutral-500 hover:border-neutral-400 text-neutral-200 shadow-none focus:ring-0`};
+    ${tw`p-2.5 sm:p-3 border rounded-lg text-sm transition-all duration-150`};
+    ${tw`bg-neutral-800/90 border-neutral-600/70 hover:border-neutral-500 text-neutral-100 placeholder-neutral-500 shadow-none focus:ring-0`};
 
     & + .input-help {
-        ${tw`mt-1 text-xs`};
-        ${(props) => (props.hasError ? tw`text-red-200` : tw`text-neutral-200`)};
+        ${tw`mt-1.5 text-xs`};
+        ${(props) => (props.hasError ? tw`text-rose-400` : tw`text-neutral-400`)};
     }
 
     &:required,
@@ -54,16 +53,16 @@ const inputStyle = css<Props>`
     }
 
     &:not(:disabled):not(:read-only):focus {
-        ${tw`shadow-md border-primary-300 ring-2 ring-primary-400 ring-opacity-50`};
-        ${(props) => props.hasError && tw`border-red-300 ring-red-200`};
+        ${tw`border-primary-500 ring-2 ring-primary-500/30 bg-neutral-800`};
+        ${(props) => props.hasError && tw`border-rose-400 ring-rose-400/30`};
     }
 
     &:disabled {
-        ${tw`opacity-75`};
+        ${tw`opacity-60 cursor-not-allowed`};
     }
 
     ${(props) => props.isLight && light};
-    ${(props) => props.hasError && tw`text-red-100 border-red-400 hover:border-red-300`};
+    ${(props) => props.hasError && tw`text-rose-200 border-rose-500 hover:border-rose-400`};
 `;
 
 const Input = styled.input<Props>`

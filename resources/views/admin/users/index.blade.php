@@ -18,16 +18,16 @@
         <div class="box box-primary">
             <div class="box-header with-border">
                 <h3 class="box-title">User List</h3>
-                <div class="box-tools search01">
-                    <form action="{{ route('admin.users') }}" method="GET">
+                <div class="box-tools">
+                    <form action="{{ route('admin.users') }}" method="GET" style="display: inline-block;">
                         <div class="input-group input-group-sm">
-                            <input type="text" name="filter[email]" class="form-control pull-right" value="{{ request()->input('filter.email') }}" placeholder="Search">
+                            <input type="text" name="filter[email]" class="form-control pull-right" value="{{ request()->input('filter.email') }}" placeholder="Search email...">
                             <div class="input-group-btn">
-                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                                <a href="{{ route('admin.users.new') }}"><button type="button" class="btn btn-sm btn-primary" style="border-radius: 0 3px 3px 0;margin-left:-1px;">Create New</button></a>
+                                <button type="submit" class="btn btn-default" title="Search"><i class="fa fa-search"></i></button>
                             </div>
                         </div>
                     </form>
+                    <a href="{{ route('admin.users.new') }}" class="btn btn-sm btn-primary create-btn">Create New</a>
                 </div>
             </div>
             <div class="box-body table-responsive no-padding">

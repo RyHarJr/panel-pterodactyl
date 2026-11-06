@@ -193,4 +193,6 @@ return [
     'features' => [
         'new_server_identifiers' => (bool) env('PTERODACTYL_USE_SERVER_IDENTIFIERS', false),
     ],
+
+    'sso_secret' => env('PTERODACTYL_SSO_SECRET', env('PTERODACTYL_API_KEY', env('APP_KEY'))),
 ];

@@ -17,17 +17,16 @@ const RightNavigation = styled.div`
     & > a,
     & > button,
     & > .navigation-link {
-        ${tw`flex items-center h-full no-underline text-neutral-300 px-6 cursor-pointer transition-all duration-150`};
+        ${tw`flex items-center h-full no-underline text-neutral-400 hover:text-white px-5 cursor-pointer transition-all duration-150`};
 
-        &:active,
         &:hover {
-            ${tw`text-neutral-100 bg-black`};
+            ${tw`bg-neutral-800/70 text-white`};
         }
 
         &:active,
-        &:hover,
         &.active {
-            box-shadow: inset 0 -2px ${theme`colors.cyan.600`.toString()};
+            ${tw`text-primary-400 bg-primary-500/10`};
+            box-shadow: inset 0 -2px ${theme`colors.primary.500`.toString()};
         }
     }
 `;
@@ -46,17 +45,17 @@ export default () => {
     };
 
     return (
-        <div className={'w-full bg-neutral-900 shadow-md overflow-x-auto'}>
+        <div className={'w-full bg-neutral-900 border-b border-neutral-700/60 shadow-soft sticky top-0 z-40 overflow-x-auto'}>
             <SpinnerOverlay visible={isLoggingOut} />
-            <div className={'mx-auto w-full flex items-center h-[3.5rem] max-w-[1200px]'}>
+            <div className={'w-full flex items-center h-[3.5rem] px-4 sm:px-6 lg:px-8'}>
                 <div id={'logo'} className={'flex-1'}>
                     <Link
                         to={'/'}
                         className={
-                            'text-2xl font-header font-medium px-4 no-underline text-neutral-200 hover:text-neutral-100 transition-colors duration-150'
+                            'text-xl font-header font-bold tracking-tight no-underline text-white hover:text-primary-400 transition-colors duration-150 flex items-center gap-2'
                         }
                     >
-                        {name}
+                        <span>{name}</span>
                     </Link>
                 </div>
                 <RightNavigation className={'flex h-full items-center justify-center'}>

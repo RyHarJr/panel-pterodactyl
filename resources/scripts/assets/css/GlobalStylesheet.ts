@@ -44,34 +44,32 @@ export default createGlobalStyle`
         -moz-appearance: textfield !important;
     }
 
-    /* Scroll Bar Style */
+    /* Custom Sleek Scrollbar (Thin & Sleek matching Panel Store) */
     ::-webkit-scrollbar {
-        background: none;
-        width: 16px;
-        height: 16px;
+        width: 6px;
+        height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
     }
 
     ::-webkit-scrollbar-thumb {
-        border: solid 0 rgb(0 0 0 / 0%);
-        border-right-width: 4px;
-        border-left-width: 4px;
-        -webkit-border-radius: 9px 4px;
-        -webkit-box-shadow: inset 0 0 0 1px hsl(211, 10%, 53%), inset 0 0 0 4px hsl(209deg 18% 30%);
+        background-color: #334155;
+        border-radius: 9999px;
     }
 
-    ::-webkit-scrollbar-track-piece {
-        margin: 4px 0;
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #6366f1;
     }
 
-    ::-webkit-scrollbar-thumb:horizontal {
-        border-right-width: 0;
-        border-left-width: 0;
-        border-top-width: 4px;
-        border-bottom-width: 4px;
-        -webkit-border-radius: 4px 9px;
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #334155 transparent;
     }
 
-    ::-webkit-scrollbar-corner {
-        background: transparent;
+    ::selection {
+        background-color: rgba(99, 102, 241, 0.35);
+        color: #ffffff;
     }
 `;

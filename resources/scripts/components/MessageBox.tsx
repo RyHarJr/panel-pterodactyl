@@ -13,13 +13,13 @@ interface Props {
 const styling = (type?: FlashMessageType): TwStyle | string => {
     switch (type) {
         case 'error':
-            return tw`bg-red-600 border-red-800`;
+            return tw`bg-rose-500/10 border-rose-500/40 text-rose-200`;
         case 'info':
-            return tw`bg-primary-600 border-primary-800`;
+            return tw`bg-primary-500/10 border-primary-500/40 text-primary-200`;
         case 'success':
-            return tw`bg-green-600 border-green-800`;
+            return tw`bg-emerald-500/10 border-emerald-500/40 text-emerald-200`;
         case 'warning':
-            return tw`bg-yellow-600 border-yellow-800`;
+            return tw`bg-amber-500/10 border-amber-500/40 text-amber-200`;
         default:
             return '';
     }
@@ -28,20 +28,20 @@ const styling = (type?: FlashMessageType): TwStyle | string => {
 const getBackground = (type?: FlashMessageType): TwStyle | string => {
     switch (type) {
         case 'error':
-            return tw`bg-red-500`;
+            return tw`bg-rose-600 text-white`;
         case 'info':
-            return tw`bg-primary-500`;
+            return tw`bg-primary-600 text-white`;
         case 'success':
-            return tw`bg-green-500`;
+            return tw`bg-emerald-600 text-white`;
         case 'warning':
-            return tw`bg-yellow-500`;
+            return tw`bg-amber-600 text-white`;
         default:
             return '';
     }
 };
 
 const Container = styled.div<{ $type?: FlashMessageType }>`
-    ${tw`p-2 border items-center leading-normal rounded flex w-full text-sm text-white`};
+    ${tw`p-3 border items-center leading-normal rounded-xl shadow-soft flex w-full text-sm`};
     ${(props) => styling(props.$type)};
 `;
 Container.displayName = 'MessageBox.Container';

@@ -43,7 +43,7 @@ export default () => {
                             </div>
                             <div css={tw`mt-6 flex items-center`}>
                                 <div css={tw`flex-1`}>
-                                    <div css={tw`border-l-4 border-cyan-500 p-3`}>
+                                    <div css={tw`border-l-4 border-primary-500 bg-primary-500/10 rounded-r-lg p-3`}>
                                         <p css={tw`text-xs text-neutral-200`}>
                                             Your SFTP password is the same as the password you use to access this panel.
                                         </p>
@@ -60,12 +60,12 @@ export default () => {
                     <TitledGreyBox title={'Debug Information'} css={tw`mb-6 md:mb-10`}>
                         <div css={tw`flex items-center justify-between text-sm`}>
                             <p>Node</p>
-                            <code css={tw`font-mono bg-neutral-900 rounded py-1 px-2`}>{node}</code>
+                            <code css={tw`font-mono bg-neutral-900 border border-neutral-700/60 rounded-lg py-1 px-2.5 text-primary-300`}>{node}</code>
                         </div>
                         <CopyOnClick text={uuid}>
                             <div css={tw`flex items-center justify-between mt-2 text-sm`}>
                                 <p>Server ID</p>
-                                <code css={tw`font-mono bg-neutral-900 rounded py-1 px-2`}>{uuid}</code>
+                                <code css={tw`font-mono bg-neutral-900 border border-neutral-700/60 rounded-lg py-1 px-2.5 text-primary-300`}>{uuid}</code>
                             </div>
                         </CopyOnClick>
                     </TitledGreyBox>

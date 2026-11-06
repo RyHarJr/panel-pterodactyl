@@ -31,19 +31,19 @@ const StatusIndicatorBox = styled(GreyRowBox)<{ $status: ServerPowerState | unde
     ${tw`grid grid-cols-12 gap-4 relative`};
 
     & .status-bar {
-        ${tw`w-2 bg-red-500 absolute right-0 z-20 rounded-full m-1 opacity-50 transition-all duration-150`};
+        ${tw`w-2 bg-rose-500 absolute right-0 z-20 rounded-full m-1 opacity-75 transition-all duration-150`};
         height: calc(100% - 0.5rem);
 
         ${({ $status }) =>
             !$status || $status === 'offline'
-                ? tw`bg-red-500`
+                ? tw`bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,0.4)]`
                 : $status === 'running'
-                ? tw`bg-green-500`
-                : tw`bg-yellow-500`};
+                ? tw`bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]`
+                : tw`bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.5)]`};
     }
 
     &:hover .status-bar {
-        ${tw`opacity-75`};
+        ${tw`opacity-100`};
     }
 `;
 

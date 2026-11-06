@@ -128,7 +128,7 @@ export default () => {
                 </div>
             </ErrorBoundary>
             {hash.replace(/^#/, '').endsWith('.pteroignore') && (
-                <div css={tw`mb-4 p-4 border-l-4 bg-neutral-900 rounded border-cyan-400`}>
+                <div css={tw`mb-4 p-4 border-l-4 bg-gray-700/80 rounded-r-xl border border-gray-600/60 border-l-primary-500`}>
                     <p css={tw`text-neutral-300 text-sm`}>
                         You&apos;re editing a <code css={tw`font-mono bg-black rounded py-px px-1`}>.pteroignore</code>{' '}
                         file. Any files or directories listed in here will be excluded from backups. Wildcards are

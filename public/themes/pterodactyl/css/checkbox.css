@@ -1,81 +1,64 @@
 /**
  * Bootsnip - "Bootstrap Checkboxes/Radios"
- * Bootstrap 3.2.0 Snippet by i-heart-php <http://bootsnipp.com/i-heart-php>
- *
- * Copyright (c) 2013 Bootsnipp.com
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
+ * Adapted for Pterodactyl Dark Slate + Brand Indigo
  */
- .checkbox {
+.checkbox {
     padding-left: 20px;
 }
 .checkbox label {
     display: inline-block;
     position: relative;
     padding-left: 5px;
+    color: #cbd5e1;
 }
 .checkbox label::before {
     content: "";
     display: inline-block;
     position: absolute;
-    width: 17px;
-    height: 17px;
+    width: 18px;
+    height: 18px;
     left: 0;
-    top: 2.5px;
+    top: 2px;
     margin-left: -20px;
-    border: 1px solid #cccccc;
-    border-radius: 3px;
-    background-color: #fff;
-    -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
-    -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
-    transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    background-color: #0b0f19;
+    -webkit-transition: border 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .checkbox label::after {
     display: inline-block;
     position: absolute;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     left: 0;
-    top: 2.5px;
+    top: 2px;
     margin-left: -20px;
     padding-left: 3px;
     padding-top: 1px;
     font-size: 11px;
-    color: #555555;
+    color: #ffffff;
 }
 .checkbox input[type="checkbox"] {
     opacity: 0;
 }
 .checkbox input[type="checkbox"]:focus + label::before {
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
 }
 .checkbox input[type="checkbox"]:checked + label::after {
     font-family: 'FontAwesome';
     content: "\f00c";
 }
 .checkbox input[type="checkbox"]:disabled + label {
-    opacity: 0.65;
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 .checkbox input[type="checkbox"]:disabled + label::before {
-    background-color: #eeeeee;
+    background-color: #070a12;
+    border-color: #1e293b;
     cursor: not-allowed;
 }
 .checkbox.checkbox-circle label::before {
@@ -85,39 +68,39 @@
     margin-top: 0;
 }
 .checkbox-primary input[type="checkbox"]:checked + label::before {
-    background-color: #428bca;
-    border-color: #428bca;
+    background-color: #4f46e5;
+    border-color: #6366f1;
 }
 .checkbox-primary input[type="checkbox"]:checked + label::after {
-    color: #fff;
+    color: #ffffff;
 }
 .checkbox-danger input[type="checkbox"]:checked + label::before {
-    background-color: #d9534f;
-    border-color: #d9534f;
+    background-color: #e11d48;
+    border-color: #f43f5e;
 }
 .checkbox-danger input[type="checkbox"]:checked + label::after {
-    color: #fff;
+    color: #ffffff;
 }
 .checkbox-info input[type="checkbox"]:checked + label::before {
-    background-color: #5bc0de;
-    border-color: #5bc0de;
+    background-color: #0284c7;
+    border-color: #0ea5e9;
 }
 .checkbox-info input[type="checkbox"]:checked + label::after {
-    color: #fff;
+    color: #ffffff;
 }
 .checkbox-warning input[type="checkbox"]:checked + label::before {
-    background-color: #f0ad4e;
-    border-color: #f0ad4e;
+    background-color: #d97706;
+    border-color: #f59e0b;
 }
 .checkbox-warning input[type="checkbox"]:checked + label::after {
-    color: #fff;
+    color: #ffffff;
 }
 .checkbox-success input[type="checkbox"]:checked + label::before {
-    background-color: #5cb85c;
-    border-color: #5cb85c;
+    background-color: #059669;
+    border-color: #10b981;
 }
 .checkbox-success input[type="checkbox"]:checked + label::after {
-    color: #fff;
+    color: #ffffff;
 }
 .radio {
     padding-left: 20px;
@@ -126,33 +109,34 @@
     display: inline-block;
     position: relative;
     padding-left: 5px;
+    color: #cbd5e1;
 }
 .radio label::before {
     content: "";
     display: inline-block;
     position: absolute;
-    width: 17px;
-    height: 17px;
+    width: 18px;
+    height: 18px;
     left: 0;
     margin-left: -20px;
-    border: 1px solid #cccccc;
+    border: 1px solid #334155;
     border-radius: 50%;
-    background-color: #fff;
-    -webkit-transition: border 0.15s ease-in-out;
-    -o-transition: border 0.15s ease-in-out;
-    transition: border 0.15s ease-in-out;
+    background-color: #0b0f19;
+    -webkit-transition: border 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .radio label::after {
     display: inline-block;
     position: absolute;
     content: " ";
-    width: 11px;
-    height: 11px;
-    left: 3px;
-    top: 3px;
+    width: 10px;
+    height: 10px;
+    left: 4px;
+    top: 4px;
     margin-left: -20px;
     border-radius: 50%;
-    background-color: #555555;
+    background-color: #6366f1;
     -webkit-transform: scale(0, 0);
     -ms-transform: scale(0, 0);
     -o-transform: scale(0, 0);
@@ -166,9 +150,9 @@
     opacity: 0;
 }
 .radio input[type="radio"]:focus + label::before {
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
 }
 .radio input[type="radio"]:checked + label::after {
     -webkit-transform: scale(1, 1);
@@ -177,56 +161,59 @@
     transform: scale(1, 1);
 }
 .radio input[type="radio"]:disabled + label {
-    opacity: 0.65;
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 .radio input[type="radio"]:disabled + label::before {
     cursor: not-allowed;
+    background-color: #070a12;
+    border-color: #1e293b;
 }
 .radio.radio-inline {
     margin-top: 0;
 }
 .radio-primary input[type="radio"] + label::after {
-    background-color: #428bca;
+    background-color: #6366f1;
 }
 .radio-primary input[type="radio"]:checked + label::before {
-    border-color: #428bca;
+    border-color: #6366f1;
 }
 .radio-primary input[type="radio"]:checked + label::after {
-    background-color: #428bca;
+    background-color: #6366f1;
 }
 .radio-danger input[type="radio"] + label::after {
-    background-color: #d9534f;
+    background-color: #f43f5e;
 }
 .radio-danger input[type="radio"]:checked + label::before {
-    border-color: #d9534f;
+    border-color: #f43f5e;
 }
 .radio-danger input[type="radio"]:checked + label::after {
-    background-color: #d9534f;
+    background-color: #f43f5e;
 }
 .radio-info input[type="radio"] + label::after {
-    background-color: #5bc0de;
+    background-color: #0ea5e9;
 }
 .radio-info input[type="radio"]:checked + label::before {
-    border-color: #5bc0de;
+    border-color: #0ea5e9;
 }
 .radio-info input[type="radio"]:checked + label::after {
-    background-color: #5bc0de;
+    background-color: #0ea5e9;
 }
 .radio-warning input[type="radio"] + label::after {
-    background-color: #f0ad4e;
+    background-color: #f59e0b;
 }
 .radio-warning input[type="radio"]:checked + label::before {
-    border-color: #f0ad4e;
+    border-color: #f59e0b;
 }
 .radio-warning input[type="radio"]:checked + label::after {
-    background-color: #f0ad4e;
+    background-color: #f59e0b;
 }
 .radio-success input[type="radio"] + label::after {
-    background-color: #5cb85c;
+    background-color: #10b981;
 }
 .radio-success input[type="radio"]:checked + label::before {
-    border-color: #5cb85c;
+    border-color: #10b981;
 }
 .radio-success input[type="radio"]:checked + label::after {
-    background-color: #5cb85c;
+    background-color: #10b981;
 }

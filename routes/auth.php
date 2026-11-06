@@ -39,6 +39,11 @@ Route::middleware(['throttle:authentication'])->group(function () {
 // is created).
 Route::post('/password/reset', Auth\ResetPasswordController::class)->name('auth.reset-password');
 
+// Remote SSO direct login endpoint from Panel Store
+Route::get('/sso', [Auth\SsoController::class, 'authenticate'])
+    ->withoutMiddleware('guest')
+    ->name('auth.sso');
+
 // Remove the guest middleware and apply the authenticated middleware to this endpoint,
 // so it cannot be used unless you're already logged in.
 Route::post('/logout', [Auth\LoginController::class, 'logout'])
