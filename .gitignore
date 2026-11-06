@@ -37,3 +37,4 @@ resources/lang/locales.js
 result
 
 * text=auto eol=lf
+public/storage
